@@ -3,96 +3,1733 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Akshita Sharma – Academic Profile</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta
+    name="description"
+    content="Akshita Sharma's professional profile: applied mathematics, quantitative research, mathematical finance, machine learning, and computational modeling."
+  />
+  <meta name="theme-color" content="#0d718a" />
+
+  <title>
+    Akshita Sharma | Applied Mathematics &amp; Quantitative Research
+  </title>
+
+  <style>
+    /* All styles are local. No framework, external fonts, or build step. */
+    :root {
+      --cyan-1: #72c8dd;
+      --cyan-2: #5abed8;
+      --cyan-3: #43b5d2;
+      --cyan-4: #2caccc;
+      --cyan-5: #14a3c7;
+      --cyan-6: #1293b3;
+      --cyan-7: #10829f;
+      --cyan-8: #0e7691;
+
+      --brand: #0d718a;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --page: #f3f4f6;
+
+      --header-offset: 160px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--text);
+      font:
+        1rem/1.625 system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    h1, h2, h3, p, ul {
+      margin: 0;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    img,
+    svg {
+      display: block;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--brand);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 100;
+
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+
+      padding: .6rem 1rem;
+      background: white;
+      color: var(--brand);
+      font-weight: 700;
+    }
+
+    .skip-link:focus {
+      width: auto;
+      height: auto;
+      overflow: visible;
+      clip-path: none;
+    }
+
+    /* HEADER */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: #fff;
+      border-top: 5px solid transparent;
+
+      border-image: linear-gradient(
+        90deg,
+        var(--cyan-1),
+        var(--cyan-3),
+        var(--cyan-5),
+        var(--cyan-6),
+        var(--cyan-8)
+      ) 1;
+
+      box-shadow: 0 2px 8px rgb(0 0 0 / 7%);
+    }
+
+    .header-inner {
+      max-width: 72rem;
+      margin: auto;
+      padding: 1.15rem 1.5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.75rem;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex: 1 1 50%;
+      min-width: 0;
+    }
+
+    .profile-photo {
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;
+
+      border-radius: 50%;
+      border: 2px solid #d9edf2;
+
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .site-name {
+      color: var(--brand);
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .tagline {
+      margin-top: .25rem;
+      font-size: .875rem;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+
+    .profile-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem 1rem;
+
+      margin-top: .4rem;
+      color: var(--brand);
+      font-size: .8125rem;
+      font-weight: 600;
+    }
+
+    .profile-links a {
+      text-decoration: none;
+    }
+
+    .profile-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* NAVIGATION */
+    .site-nav {
+      display: flex;
+      flex: 1 1 45%;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: .4rem 1rem;
+      min-width: 0;
+    }
+
+    .nav-button {
+      color: var(--accent-ink);
+      padding: .3rem 0;
+
+      border-bottom: 2px solid transparent;
+
+      font-size: .875rem;
+      font-weight: 600;
+      text-decoration: none;
+
+      transition: border-color .2s ease;
+    }
+
+    .nav-button:hover,
+    .nav-button[aria-current="location"] {
+      border-bottom-color: var(--accent);
+    }
+
+    /* MAIN LAYOUT */
+    main {
+      max-width: 64rem;
+      margin: auto;
+      padding: 2.5rem 1rem;
+    }
+
+    .profile-section {
+      margin-bottom: 1.25rem;
+      overflow: hidden;
+      background: #fff;
+
+      border: 1px solid #e5e7eb;
+      border-radius: .65rem;
+
+      scroll-margin-top: var(--header-offset);
+      box-shadow: 0 3px 8px rgb(0 0 0 / 6%);
+    }
+
+    .section-heading {
+      font-size: inherit;
+    }
+
+    .section-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+
+      border: 0;
+      background: transparent;
+      color: var(--accent-ink);
+
+      text-align: left;
+      cursor: pointer;
+
+      transition: background-color .2s ease;
+    }
+
+    .section-toggle:hover {
+      background: #f0fafc;
+    }
+
+    .section-toggle:focus-visible {
+      outline-offset: -5px;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .section-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      transition: transform 360ms ease;
+    }
+
+    .section-toggle[aria-expanded="true"] .section-icon {
+      transform: rotate(180deg);
+    }
+
+    /*
+      All panels remain readable when JavaScript is unavailable.
+      JavaScript initializes the single-open-section accordion.
+    */
+    .section-content {
+      height: auto;
+      overflow: hidden;
+      opacity: 1;
+
+      transition:
+        height 360ms ease,
+        opacity 200ms ease;
+    }
+
+    .accordion-ready .section-content:not(.open) {
+      opacity: 0;
+    }
+
+    .section-body {
+      padding: 0 1.5rem 1.5rem;
+    }
+
+    /* CONSISTENT LEFT-BORDER ENTRIES */
+    .entry-list {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .about-paragraphs {
+      gap: 1.25rem;
+    }
+
+    .timeline-item {
+      min-width: 0;
+      border-left: 4px solid var(--accent);
+      padding-left: 1.25rem;
+      color: #374151;
+    }
+
+    .entry-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: .5rem 1.25rem;
+    }
+
+    .entry-title {
+      color: var(--text);
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .entry-dates {
+      flex-shrink: 0;
+      color: #6b7280;
+      font-size: .875rem;
+    }
+
+    .entry-organization {
+      margin-top: .15rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .entry-details {
+      margin-top: .75rem;
+      padding-left: 1.25rem;
+      list-style: disc;
+    }
+
+    .entry-details li + li {
+      margin-top: .35rem;
+    }
+
+    .entry-note {
+      margin-top: .65rem;
+      color: var(--muted);
+      font-size: .875rem;
+    }
+
+    .entry-copy {
+      margin-top: .45rem;
+    }
+
+    .accent-link {
+      color: var(--accent-ink, var(--brand));
+      font-weight: 600;
+
+      text-decoration: underline;
+      text-underline-offset: .18em;
+
+      overflow-wrap: anywhere;
+    }
+
+    .accent-link:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    .contact-list {
+      gap: 1.25rem;
+    }
+
+    /*
+      Each navigation label uses the same text color as its section.
+      Lighter cyan shades are reserved for decorative borders.
+    */
+    #about,
+    .nav-button[data-section="about"] {
+      --accent: var(--cyan-1);
+      --accent-ink: #147b94;
+    }
+
+    #interests,
+    .nav-button[data-section="interests"] {
+      --accent: var(--cyan-2);
+      --accent-ink: #137890;
+    }
+
+    #internships,
+    .nav-button[data-section="internships"] {
+      --accent: var(--cyan-3);
+      --accent-ink: #12758d;
+    }
+
+    #research,
+    .nav-button[data-section="research"] {
+      --accent: var(--cyan-4);
+      --accent-ink: #11728a;
+    }
+
+    #skills,
+    .nav-button[data-section="skills"] {
+      --accent: var(--cyan-5);
+      --accent-ink: #106f87;
+    }
+
+    #education,
+    .nav-button[data-section="education"] {
+      --accent: var(--cyan-6);
+      --accent-ink: #0f6980;
+    }
+
+    #leadership,
+    .nav-button[data-section="leadership"] {
+      --accent: var(--cyan-7);
+      --accent-ink: #0d6378;
+    }
+
+    #contact,
+    .nav-button[data-section="contact"] {
+      --accent: var(--cyan-8);
+      --accent-ink: #0c6075;
+    }
+
+    .site-footer {
+      padding: 1.5rem 1rem;
+      border-top: 1px solid #cde8ee;
+      background: #fff;
+      color: #6b7280;
+      text-align: center;
+      font-size: .875rem;
+    }
+
+    /* TABLET */
+    @media (max-width: 850px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: .75rem;
+      }
+
+      .profile,
+      .site-nav {
+        flex-basis: auto;
+      }
+
+      .site-nav {
+        justify-content: flex-start;
+      }
+
+      .entry-heading {
+        flex-direction: column;
+        gap: .2rem;
+      }
+
+      .entry-dates {
+        flex-shrink: 1;
+      }
+    }
+
+    /* MOBILE */
+    @media (max-width: 520px) {
+      .header-inner {
+        padding: .85rem 1rem;
+      }
+
+      .profile {
+        gap: .75rem;
+      }
+
+      .profile-photo {
+        width: 64px;
+        height: 64px;
+      }
+
+      .site-name {
+        font-size: 1.3rem;
+      }
+
+      .tagline,
+      .nav-button {
+        font-size: .8125rem;
+      }
+
+      .site-nav {
+        gap: .2rem .85rem;
+      }
+
+      main {
+        padding: 1.25rem .75rem;
+      }
+
+      .section-toggle {
+        padding: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.2rem;
+      }
+
+      .section-body {
+        padding: 0 1rem 1.25rem;
+      }
+
+      .timeline-item {
+        padding-left: 1rem;
+      }
+
+      .entry-title {
+        font-size: 1.05rem;
+      }
+    }
+
+    /* RESPECT REDUCED-MOTION PREFERENCES */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .section-content,
+      .section-icon,
+      .section-toggle,
+      .nav-button {
+        transition: none;
+      }
+    }
+
+    /* PRINT ALL SECTIONS, INCLUDING COLLAPSED ONES */
+    @media print {
+      .site-header {
+        position: static;
+        box-shadow: none;
+      }
+
+      .site-nav,
+      .profile-links,
+      .section-icon,
+      .skip-link {
+        display: none;
+      }
+
+      body {
+        background: white;
+      }
+
+      main {
+        max-width: none;
+        padding: 1rem 0;
+      }
+
+      .profile-section {
+        box-shadow: none;
+        overflow: visible;
+      }
+
+      .section-content,
+      .section-content[hidden] {
+        display: block !important;
+        height: auto !important;
+        opacity: 1 !important;
+        overflow: visible !important;
+      }
+
+      .section-heading {
+        break-after: avoid;
+      }
+
+      .timeline-item {
+        break-inside: avoid;
+      }
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
-  <header class="bg-white shadow-md py-6">
-    <div class="max-w-5xl mx-auto px-4 flex items-center justify-between">
-      <div class="flex items-center space-x-4">
-        <img src="AkshitaSharmapic.jpg" alt="Profile" class="w-16 h-16 rounded-full border" />
+
+<body>
+  <a class="skip-link" href="#main-content">
+    Skip to content
+  </a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <div class="profile">
+        <img
+          class="profile-photo"
+          src="AkshitaSharmapic.jpg"
+          alt="Portrait of Akshita Sharma"
+          width="80"
+          height="80"
+        />
+
         <div>
-          <h1 class="text-xl font-bold">Akshita Sharma</h1>
-          <p class="text-sm text-gray-600">PhD Candidate in Applied Mathematics | Researcher in Quantitative Modeling</p>
+          <h1 class="site-name">
+            Akshita Sharma
+          </h1>
+
+          <p class="tagline">
+            Applied Mathematics |
+            Quantitative Research &amp; Machine Learning
+          </p>
+
+          <div class="profile-links">
+            <a href="mailto:akssharma.gapp@gmail.com">
+              Email
+            </a>
+
+            <a
+              href="ASharma_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View résumé (PDF)
+            </a>
+          </div>
         </div>
       </div>
-      <nav class="space-x-4">
-        <a href="#about" class="hover:underline">About</a>
-        <a href="#publications" class="hover:underline">Publications</a>
-        <a href="#projects" class="hover:underline">Projects</a>
-        <a href="#contact" class="hover:underline">Contact</a>
+
+      <!-- NAVIGATION -->
+      <nav class="site-nav" aria-label="Main navigation">
+        <a
+          class="nav-button"
+          href="#about"
+          data-section="about"
+        >About</a>
+
+        <a
+          class="nav-button"
+          href="#interests"
+          data-section="interests"
+        >Interests</a>
+
+        <a
+          class="nav-button"
+          href="#internships"
+          data-section="internships"
+        >Internships</a>
+
+        <a
+          class="nav-button"
+          href="#research"
+          data-section="research"
+        >Research</a>
+
+        <a
+          class="nav-button"
+          href="#skills"
+          data-section="skills"
+        >Skills</a>
+
+        <a
+          class="nav-button"
+          href="#education"
+          data-section="education"
+        >Education</a>
+
+        <a
+          class="nav-button"
+          href="#leadership"
+          data-section="leadership"
+        >Leadership</a>
+
+        <a
+          class="nav-button"
+          href="#contact"
+          data-section="contact"
+        >Contact</a>
       </nav>
+
     </div>
   </header>
 
-  <main class="max-w-4xl mx-auto px-4 py-10">
-    <!-- About Section -->
-    <section id="about" class="mb-12">
-      <h2 class="text-2xl font-bold mb-2">About Me</h2>
-      <p class="text-gray-700">
-      This is your About Me section, introduce yourself in a profession way to the rest of the word
-      </p>
-    </section>
+  <!-- MAIN CONTENT -->
+  <main id="main-content" tabindex="-1">
 
-    <!-- Publications -->
-    <section id="publications" class="mb-12">
-      <h2 class="text-2xl font-bold mb-4">Publications</h2>
-      <ul class="space-y-4">
-        <li>
-          <strong>Title of Article #1</strong><br/>
-          <em>Journal/School, Volume/Country, Year</em><br/>
-          <a href="https://linktoarticle1" class="text-blue-600 hover:underline">[PDF]</a>
-        </li>
-        <li>
-          <strong>Title of Article #2</strong><br/>
-          <em>Journal/School, Volume/Country, Year</em><br/>
-          <a href="https://linktoarticle2" class="text-blue-600 hover:underline">[PDF]</a>
-        </li>
-        <li>
-          <strong>Title of Article #3</strong><br/>
-          <em>Journal/School, Volume/Country, Year</em><br/>
-          <a href="https://linktoarticle3" class="text-blue-600 hover:underline">[PDF]</a>
-        </li>
+    <!-- ABOUT ME -->
+    <section id="about" class="profile-section">
+      <h2 class="section-heading">
+        <button
+          id="toggle-about"
+          class="section-toggle"
+          type="button"
+          aria-expanded="true"
+          aria-controls="content-about"
+        >
+          <span class="section-title">
+            About Me
+          </span>
 
-      </ul>
-    </section>
+          <svg
+            class="section-icon"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path
+              d="M19 9l-7 7-7-7"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </h2>
 
-    <!-- Projects -->
-    <section id="projects" class="mb-12">
-      <h2 class="text-2xl font-bold mb-4">Projects</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div class="p-4 bg-white shadow-md rounded-lg">
-          <h3 class="font-semibold">Title of Project #1.
-</h3>
-          <p class="text-sm text-gray-600">Project #1's description/abstract.</p>
+      <div
+        id="content-about"
+        class="section-content"
+        role="region"
+        aria-labelledby="toggle-about"
+      >
+        <div class="section-body entry-list about-paragraphs">
+
+          <p class="timeline-item">
+            I have a background in
+            <strong>applied mathematics and computer science</strong>,
+            with interests in quantitative research, analytics, and
+            applications of artificial intelligence and machine learning.
+            I am particularly interested in mathematical finance, including
+            portfolio optimization, factor investing, risk management,
+            and asset-liability management. My internship experience at
+            <strong>Wells Fargo</strong> and the
+            <strong>Abu Dhabi Investment Authority</strong>
+            includes credit modeling, branch-network optimization,
+            natural language processing, model validation, and
+            event-driven trading strategies.
+          </p>
+
+          <p class="timeline-item">
+            My academic research spans computational physiology, disease
+            networks, language models, and audio processing. At the
+            <strong>University of Arizona</strong>, I have developed
+            computational models of cerebral microcirculation, worked on
+            disease module identification, and built an NLP pipeline for
+            fine-tuning a large language model. My earlier research with
+            <strong>Intel Labs and the UC Davis Center for Mind and Brain</strong>
+            involved neural networks, speech separation, and audiovisual
+            speaker localization. Across these settings, I use mathematical
+            modeling and computation to investigate problems in finance,
+            biology, and technology.
+          </p>
+
         </div>
-	<div class="p-4 bg-white shadow-md rounded-lg">
-	  <h3 class="font-semibold">Title of Project #2.
-</h3>
-          <p class="text-sm text-gray-600">Project #2's description/abstract.</p>
-        </div>
-	<div class="p-4 bg-white shadow-md rounded-lg">	  
-	  <h3 class="font-semibold">Title of Project #3.
-</h3>
-          <p class="text-sm text-gray-600">Project #3's description/abstract.</p>
-        </div>
-
-        <!-- Add more -->
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact">
-      <h2 class="text-2xl font-bold mb-4">Contact</h2>
-      <p>Email: <a href="mailto:amsharma@arizona.edu" class="text-blue-600 hover:underline">amsharma@arizona.edu</a></p>
-      <p>LinkedIn: <a href="linkedin.com/in/akshita-sharma-658193195" class="text-blue-600 hover:underline">Akshita Sharma</a></p>
-      <p>GitHub: <a href="https://github.com/AkshtaSharma" class="text-blue-600 hover:underline">AkshitaSharma</a></p>
-      <p>Resume: <a href="https://docs.google.com/document/d/1gQSbh1MNrF_sEicRwQjHPcjKSw4a832E/edit" class="text-blue-600 hover:underline">AkshitaSharmaResume</a></p>
+    <!-- RESEARCH INTERESTS -->
+    <section id="interests" class="profile-section">
+      <h2 class="section-heading">
+        <button
+          id="toggle-interests"
+          class="section-toggle"
+          type="button"
+          aria-expanded="true"
+          aria-controls="content-interests"
+        >
+          <span class="section-title">
+            Research Interests
+          </span>
+
+          <svg
+            class="section-icon"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path
+              d="M19 9l-7 7-7-7"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </h2>
+
+      <div
+        id="content-interests"
+        class="section-content"
+        role="region"
+        aria-labelledby="toggle-interests"
+      >
+        <div class="section-body entry-list">
+
+          <article class="timeline-item">
+            <h3 class="entry-title">
+              Quantitative Research &amp; Analytics
+            </h3>
+
+            <p class="entry-copy">
+              Quantitative research and analytics, with a curiosity for
+              applications of AI and machine learning.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <h3 class="entry-title">
+              Mathematical Finance
+            </h3>
+
+            <p class="entry-copy">
+              Portfolio optimization, factor investing, risk management,
+              and asset-liability management.
+            </p>
+          </article>
+
+        </div>
+      </div>
     </section>
+
+    <!-- INTERNSHIPS -->
+    <section id="internships" class="profile-section">
+      <h2 class="section-heading">
+        <button
+          id="toggle-internships"
+          class="section-toggle"
+          type="button"
+          aria-expanded="true"
+          aria-controls="content-internships"
+        >
+          <span class="section-title">
+            Internships
+          </span>
+
+          <svg
+            class="section-icon"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path
+              d="M19 9l-7 7-7-7"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </h2>
+
+      <div
+        id="content-internships"
+        class="section-content"
+        role="region"
+        aria-labelledby="toggle-internships"
+      >
+        <div class="section-body entry-list">
+
+          <article class="timeline-item">
+            <div class="entry-heading">
+              <h3 class="entry-title">
+                Quantitative Analytics Intern
+              </h3>
+
+              <span class="entry-dates">
+                Summers 2023, 2024, 2025
+              </span>
+            </div>
+
+            <p class="entry-organization">
+              Wells Fargo | Charlotte, NC
+            </p>
+
+            <ul class="entry-details">
+              <li>
+                Developed an R-based machine learning model for credit
+                score estimation of not-for-profit municipal healthcare
+                borrowers.
+              </li>
+
+              <li>
+                Developed a model to optimize Wells Fargo’s branch
+                distribution network. Implemented a Python-based machine
+                learning approach to quantify the relationship between
+                physical presence and household penetration.
+              </li>
+
+              <li>
+                Developed an NLP-based solution to classify over 6,000
+                employee surveys into 51 distinct categories using Support
+                Vector Classification. Implemented an LDA-based clustering
+                technique to label surveys with low classification
+                confidence, improving overall model reliability.
+              </li>
+
+              <li>
+                Built a flexible ML-powered validation tool to assess
+                interaction term necessity, model fit, and performance
+                through granular testing, backtesting, and
+                sensitivity/stress testing on downsized datasets.
+              </li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="entry-heading">
+              <h3 class="entry-title">
+                Quantitative Research &amp; Development Intern
+              </h3>
+
+              <span class="entry-dates">
+                June 2022 – August 2022
+              </span>
+            </div>
+
+            <p class="entry-organization">
+              Abu Dhabi Investment Authority | Abu Dhabi, UAE
+            </p>
+
+            <ul class="entry-details">
+              <li>
+                Researched and implemented NLP-based algorithmic trading
+                strategies for event-driven trading using alternative data.
+              </li>
+
+              <li>
+                Achieved high Sharpe ratios for North American-focused
+                equity trading strategies.
+              </li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="entry-heading">
+              <h3 class="entry-title">
+                Technology Transfer Intern
+              </h3>
+
+              <span class="entry-dates">
+                June 2020 – April 2021
+              </span>
+            </div>
+
+            <p class="entry-organization">
+              UC Davis Office of Research | Davis, CA
+            </p>
+
+            <ul class="entry-details">
+              <li>
+                Conducted patent searches and drafted non-confidential
+                disclosures for university inventions to support
+                technology marketing.
+              </li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH EXPERIENCE -->
+    <section id="research" class="profile-section">
+      <h2 class="section-heading">
+        <button
+          id="toggle-research"
+          class="section-toggle"
+          type="button"
+          aria-expanded="true"
+          aria-controls="content-research"
+        >
+          <span class="section-title">
+            Research Experience
+          </span>
+
+          <svg
+            class="section-icon"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path
+              d="M19 9l-7 7-7-7"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </h2>
+
+      <div
+        id="content-research"
+        class="section-content"
+        role="region"
+        aria-labelledby="toggle-research"
+      >
+        <div class="section-body entry-list">
+
+          <article class="timeline-item">
+            <div class="entry-heading">
+              <h3 class="entry-title">
+                Case Studies in Applied Mathematics,
+                Physiology, &amp; Cancer Biology
+              </h3>
+
+              <span class="entry-dates">
+                August 2021 – Present
+              </span>
+            </div>
+
+            <p class="entry-organization">
+              University of Arizona
+            </p>
+
+            <ul class="entry-details">
+              <li>
+                Developed large-scale computational models of cerebral
+                microcirculation, comprising approximately 20,000 vessel
+                segments, to study how redistribution of blood flow in
+                penetrating arterioles affects cortical oxygen transport.
+              </li>
+
+              <li>
+                Demonstrated how localized vascular dysfunction can trigger
+                tissue hypoxia even when overall perfusion is preserved.
+              </li>
+
+              <li>
+                Defined disease module identification algorithms using
+                dynamical systems and Bayesian network analysis.
+              </li>
+            </ul>
+
+            <p class="entry-note">
+              Related work: Sharma, A., &amp; Secomb, T. W. (2025).
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="entry-heading">
+              <h3 class="entry-title">
+                Research Assistant — Materials Informatics Lab
+              </h3>
+
+              <span class="entry-dates">
+                January 2024 – June 2024
+              </span>
+            </div>
+
+            <p class="entry-organization">
+              University of Arizona
+            </p>
+
+            <ul class="entry-details">
+              <li>
+                Developed and implemented an NLP pipeline to fine-tune
+                a large language model using an NSF award dataset,
+                creating a GPT-style question-and-answer model.
+              </li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="entry-heading">
+              <h3 class="entry-title">
+                Research Assistant
+              </h3>
+
+              <span class="entry-dates">
+                April 2018 – July 2021
+              </span>
+            </div>
+
+            <p class="entry-organization">
+              Intel Labs &amp; UC Davis Center for Mind and Brain
+            </p>
+
+            <ul class="entry-details">
+              <li>
+                Implemented neural-network-based algorithms, including
+                DeepSpeech, for speech amplification and speech-to-text
+                translation. Developed a Kalman filtering paradigm for
+                audiovisual speaker localization.
+              </li>
+
+              <li>
+                Assisted in building an “attentional prosthesis” for
+                individuals with hearing impairment. Integrated a
+                speech-separation machine learning algorithm to complement
+                hearing-aid use and assess the suitability of Intel’s
+                Loihi neuromorphic chip for real-time audio source
+                separation.
+              </li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="profile-section">
+      <h2 class="section-heading">
+        <button
+          id="toggle-skills"
+          class="section-toggle"
+          type="button"
+          aria-expanded="true"
+          aria-controls="content-skills"
+        >
+          <span class="section-title">
+            Skills
+          </span>
+
+          <svg
+            class="section-icon"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path
+              d="M19 9l-7 7-7-7"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </h2>
+
+      <div
+        id="content-skills"
+        class="section-content"
+        role="region"
+        aria-labelledby="toggle-skills"
+      >
+        <div class="section-body entry-list">
+
+          <article class="timeline-item">
+            <h3 class="entry-title">
+              Mathematics
+            </h3>
+
+            <p class="entry-copy">
+              Automation, optimization, probability theory, information
+              theory, signal processing, and stochastic control.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <h3 class="entry-title">
+              Scientific Computation
+            </h3>
+
+            <p class="entry-copy">
+              Machine learning and artificial intelligence, natural
+              language processing, time series analysis, dataflow-based
+              online modeling, diagnosis, and monitoring.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <h3 class="entry-title">
+              Programming
+            </h3>
+
+            <p class="entry-copy">
+              <strong>Proficient:</strong>
+              Python, C, C++.
+            </p>
+
+            <p class="entry-copy">
+              <strong>Elementary proficiency:</strong>
+              R, MATLAB, Java.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="profile-section">
+      <h2 class="section-heading">
+        <button
+          id="toggle-education"
+          class="section-toggle"
+          type="button"
+          aria-expanded="true"
+          aria-controls="content-education"
+        >
+          <span class="section-title">
+            Education
+          </span>
+
+          <svg
+            class="section-icon"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path
+              d="M19 9l-7 7-7-7"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </h2>
+
+      <div
+        id="content-education"
+        class="section-content"
+        role="region"
+        aria-labelledby="toggle-education"
+      >
+        <div class="section-body entry-list">
+
+          <!--
+            The supplied résumé lists an expected date,
+            not a confirmed degree-award date.
+          -->
+          <article class="timeline-item">
+            <div class="entry-heading">
+              <h3 class="entry-title">
+                Ph.D. in Applied Mathematics
+              </h3>
+
+              <span class="entry-dates">
+                Expected graduation: May 2026
+              </span>
+            </div>
+
+            <p class="entry-organization">
+              University of Arizona
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="entry-heading">
+              <h3 class="entry-title">
+                M.S. in Applied Mathematics
+              </h3>
+
+              <span class="entry-dates">
+                August 2021 – May 2023
+              </span>
+            </div>
+
+            <p class="entry-organization">
+              University of Arizona
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="entry-heading">
+              <h3 class="entry-title">
+                B.S. in Applied Mathematics
+              </h3>
+
+              <span class="entry-dates">
+                September 2017 – June 2021
+              </span>
+            </div>
+
+            <p class="entry-organization">
+              University of California, Davis
+            </p>
+
+            <p class="entry-copy">
+              Minor in Computer Science
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP & INVOLVEMENT -->
+    <section id="leadership" class="profile-section">
+      <h2 class="section-heading">
+        <button
+          id="toggle-leadership"
+          class="section-toggle"
+          type="button"
+          aria-expanded="true"
+          aria-controls="content-leadership"
+        >
+          <span class="section-title">
+            Leadership &amp; Involvement
+          </span>
+
+          <svg
+            class="section-icon"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path
+              d="M19 9l-7 7-7-7"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </h2>
+
+      <div
+        id="content-leadership"
+        class="section-content"
+        role="region"
+        aria-labelledby="toggle-leadership"
+      >
+        <div class="section-body entry-list">
+
+          <article class="timeline-item">
+            <div class="entry-heading">
+              <h3 class="entry-title">
+                Graduate Representative
+              </h3>
+
+              <span class="entry-dates">
+                August 2023 – May 2024
+              </span>
+            </div>
+
+            <p class="entry-organization">
+              Applied Mathematics Graduate Interdisciplinary Program
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="entry-heading">
+              <h3 class="entry-title">
+                Graduate College Representative
+              </h3>
+
+              <span class="entry-dates">
+                August 2022 – June 2023
+              </span>
+            </div>
+
+            <p class="entry-organization">
+              Graduate Professional Student Council,
+              University of Arizona
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="profile-section">
+      <h2 class="section-heading">
+        <button
+          id="toggle-contact"
+          class="section-toggle"
+          type="button"
+          aria-expanded="true"
+          aria-controls="content-contact"
+        >
+          <span class="section-title">
+            Contact
+          </span>
+
+          <svg
+            class="section-icon"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path
+              d="M19 9l-7 7-7-7"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </h2>
+
+      <div
+        id="content-contact"
+        class="section-content"
+        role="region"
+        aria-labelledby="toggle-contact"
+      >
+        <div class="section-body entry-list contact-list">
+
+          <p class="timeline-item">
+            <strong>Email:</strong>
+
+            <a
+              class="accent-link"
+              href="mailto:akssharma.gapp@gmail.com"
+            >
+              akssharma.gapp@gmail.com
+            </a>
+          </p>
+
+          <p class="timeline-item">
+            <strong>Résumé:</strong>
+
+            <a
+              class="accent-link"
+              href="ASharma_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View résumé (PDF)
+            </a>
+          </p>
+
+          <!--
+            Add professional profile links here once their exact URLs
+            are confirmed.
+
+            The original résumé PDF contains a street address and
+            phone number; review it before making the website public.
+          -->
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="bg-white text-center text-gray-500 text-sm py-4">
-    © 2026 Akshita Sharma. All rights reserved.
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    © <span id="footer-year">2026</span>
+    Akshita Sharma. All rights reserved.
   </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    (() => {
+      "use strict";
+
+      const header = document.querySelector(".site-header");
+
+      const sections = [
+        ...document.querySelectorAll(".profile-section")
+      ];
+
+      const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      );
+
+      const panels = new Map();
+      const duration = 360;
+
+      let scrollTimer;
+
+      function updateHeaderOffset() {
+        document.documentElement.style.setProperty(
+          "--header-offset",
+          `${header.getBoundingClientRect().height + 16}px`
+        );
+      }
+
+      function finishTransition(item) {
+        window.clearTimeout(item.finishTimer);
+
+        const isOpen = item.content.classList.contains("open");
+
+        item.content.style.height = isOpen ? "auto" : "0px";
+        item.content.hidden = !isOpen;
+      }
+
+      function setPanel(id, isOpen, animate = true) {
+        const item = panels.get(id);
+
+        if (!item) return;
+
+        const wasOpen = item.content.classList.contains("open");
+
+        // Keep keyboard focus out of a panel that is closing.
+        if (
+          !isOpen &&
+          item.content.contains(document.activeElement)
+        ) {
+          item.button.focus({ preventScroll: true });
+        }
+
+        item.button.setAttribute(
+          "aria-expanded",
+          String(isOpen)
+        );
+
+        item.content.setAttribute(
+          "aria-hidden",
+          String(!isOpen)
+        );
+
+        item.content.inert = !isOpen;
+
+        if (isOpen) {
+          item.nav.setAttribute("aria-current", "location");
+        } else {
+          item.nav.removeAttribute("aria-current");
+        }
+
+        if (animate && wasOpen === isOpen) return;
+
+        window.clearTimeout(item.finishTimer);
+
+        if (!animate || reducedMotion.matches) {
+          item.content.classList.toggle("open", isOpen);
+          finishTransition(item);
+          return;
+        }
+
+        /*
+          Animate between measured heights rather than using an
+          oversized max-height.
+        */
+        const startHeight = item.content.hidden
+          ? 0
+          : item.content.getBoundingClientRect().height;
+
+        item.content.hidden = false;
+        item.content.style.height = `${startHeight}px`;
+
+        // Commit the starting height before setting the target.
+        void item.content.offsetHeight;
+
+        item.content.classList.toggle("open", isOpen);
+
+        item.content.style.height = isOpen
+          ? `${item.content.scrollHeight}px`
+          : "0px";
+
+        // Fallback in case transitionend is not emitted.
+        item.finishTimer = window.setTimeout(
+          () => finishTransition(item),
+          duration + 50
+        );
+      }
+
+      function scrollToSection(id) {
+        updateHeaderOffset();
+
+        const top =
+          document.getElementById(id).getBoundingClientRect().top +
+          window.scrollY -
+          header.getBoundingClientRect().height -
+          16;
+
+        window.scrollTo({
+          top: Math.max(0, top),
+          behavior: reducedMotion.matches ? "auto" : "smooth"
+        });
+      }
+
+      function openSection(id, shouldScroll = true) {
+        if (!panels.has(id)) return;
+
+        window.clearTimeout(scrollTimer);
+
+        panels.forEach((item, panelId) => {
+          setPanel(panelId, panelId === id);
+        });
+
+        if (shouldScroll) {
+          scrollTimer = window.setTimeout(
+            () => scrollToSection(id),
+            reducedMotion.matches ? 0 : duration + 70
+          );
+        }
+      }
+
+      function updateHash(id) {
+        /*
+          replaceState avoids a second, browser-triggered scroll.
+          Navigation still works when a local preview restricts it.
+        */
+        try {
+          history.replaceState(null, "", `#${id}`);
+        } catch {
+          // No history update is needed for accordion operation.
+        }
+      }
+
+      sections.forEach(section => {
+        const id = section.id;
+
+        const item = {
+          content: document.getElementById(`content-${id}`),
+          button: document.getElementById(`toggle-${id}`),
+          nav: document.querySelector(
+            `.nav-button[data-section="${id}"]`
+          )
+        };
+
+        panels.set(id, item);
+
+        // Section headings toggle their associated panel.
+        item.button.addEventListener("click", () => {
+          window.clearTimeout(scrollTimer);
+
+          if (item.content.classList.contains("open")) {
+            setPanel(id, false);
+          } else {
+            openSection(id);
+            updateHash(id);
+          }
+        });
+
+        // Navigation links always open their target section.
+        item.nav.addEventListener("click", event => {
+          /*
+            Preserve normal browser behavior when a modifier key
+            is used to open the section link in another tab.
+          */
+          if (
+            event.ctrlKey ||
+            event.metaKey ||
+            event.shiftKey ||
+            event.altKey
+          ) {
+            return;
+          }
+
+          event.preventDefault();
+
+          openSection(id);
+          updateHash(id);
+        });
+
+        item.content.addEventListener("transitionend", event => {
+          if (
+            event.target === item.content &&
+            event.propertyName === "height"
+          ) {
+            finishTransition(item);
+          }
+        });
+      });
+
+      // Optional arrow-key navigation between accordion headings.
+      const buttons = [
+        ...panels.values()
+      ].map(item => item.button);
+
+      buttons.forEach((button, index) => {
+        button.addEventListener("keydown", event => {
+          let next;
+
+          if (event.key === "ArrowDown") {
+            next = (index + 1) % buttons.length;
+          } else if (event.key === "ArrowUp") {
+            next = (
+              index - 1 + buttons.length
+            ) % buttons.length;
+          } else if (event.key === "Home") {
+            next = 0;
+          } else if (event.key === "End") {
+            next = buttons.length - 1;
+          } else {
+            return;
+          }
+
+          event.preventDefault();
+          buttons[next].focus();
+        });
+      });
+
+      /*
+        Open About Me by default.
+        A valid URL fragment opens its corresponding section instead.
+      */
+      document.documentElement.classList.add("accordion-ready");
+
+      const initialHash = window.location.hash.slice(1);
+
+      const initialSection = panels.has(initialHash)
+        ? initialHash
+        : "about";
+
+      panels.forEach((item, id) => {
+        setPanel(id, id === initialSection, false);
+      });
+
+      updateHeaderOffset();
+
+      if (panels.has(initialHash)) {
+        requestAnimationFrame(() => {
+          scrollToSection(initialSection);
+        });
+      }
+
+      // Support direct links such as index.html#research.
+      window.addEventListener("hashchange", () => {
+        const id = window.location.hash.slice(1);
+
+        if (panels.has(id)) {
+          openSection(id);
+        }
+      });
+
+      // Recalculate the scroll offset when the header wraps or resizes.
+      window.addEventListener("resize", updateHeaderOffset);
+
+      if ("ResizeObserver" in window) {
+        new ResizeObserver(updateHeaderOffset).observe(header);
+      }
+
+      document.getElementById("footer-year").textContent =
+        new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
