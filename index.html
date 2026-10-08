@@ -7,7 +7,7 @@
     name="description"
     content="Akshita Sharma's professional profile: applied mathematics, quantitative research, mathematical finance, machine learning, and computational modeling."
   />
-  <meta name="theme-color" content="#0d718a" />
+  <meta name="theme-color" content="#6a359c" />
 
   <title>
     Akshita Sharma | Applied Mathematics &amp; Quantitative Research
@@ -15,17 +15,28 @@
 
   <style>
     /* All styles are local. No framework, external fonts, or build step. */
-    :root {
-      --cyan-1: #72c8dd;
-      --cyan-2: #5abed8;
-      --cyan-3: #43b5d2;
-      --cyan-4: #2caccc;
-      --cyan-5: #14a3c7;
-      --cyan-6: #1293b3;
-      --cyan-7: #10829f;
-      --cyan-8: #0e7691;
 
-      --brand: #0d718a;
+    /*
+      Purple Gradient palette:
+      https://www.schemecolor.com/purple-gradient.php
+
+      Original anchors:
+      #552586, #6A359C, #804FB3, #9969C7, #B589D6.
+
+      Intermediate shades extend the palette across eight sections.
+      Darker purple text maintains readability on white backgrounds.
+    */
+    :root {
+      --purple-1: #b589d6;
+      --purple-2: #a779cf;
+      --purple-3: #9969c7;
+      --purple-4: #8d5cbd;
+      --purple-5: #804fb3;
+      --purple-6: #6a359c;
+      --purple-7: #602d91;
+      --purple-8: #552586;
+
+      --brand: #6a359c;
       --text: #1f2937;
       --muted: #4b5563;
       --page: #f3f4f6;
@@ -119,11 +130,11 @@
 
       border-image: linear-gradient(
         90deg,
-        var(--cyan-1),
-        var(--cyan-3),
-        var(--cyan-5),
-        var(--cyan-6),
-        var(--cyan-8)
+        var(--purple-1),
+        var(--purple-3),
+        var(--purple-5),
+        var(--purple-6),
+        var(--purple-8)
       ) 1;
 
       box-shadow: 0 2px 8px rgb(0 0 0 / 7%);
@@ -154,7 +165,7 @@
       flex-shrink: 0;
 
       border-radius: 50%;
-      border: 2px solid #d9edf2;
+      border: 2px solid #e8dbf3;
 
       object-fit: cover;
       object-position: center;
@@ -264,7 +275,7 @@
     }
 
     .section-toggle:hover {
-      background: #f0fafc;
+      background: #f8f3fc;
     }
 
     .section-toggle:focus-visible {
@@ -393,59 +404,59 @@
 
     /*
       Each navigation label uses the same text color as its section.
-      Lighter cyan shades are reserved for decorative borders.
+      Lighter purple shades are reserved for decorative borders.
     */
     #about,
     .nav-button[data-section="about"] {
-      --accent: var(--cyan-1);
-      --accent-ink: #147b94;
+      --accent: var(--purple-1);
+      --accent-ink: #804fb3;
     }
 
     #interests,
     .nav-button[data-section="interests"] {
-      --accent: var(--cyan-2);
-      --accent-ink: #137890;
+      --accent: var(--purple-2);
+      --accent-ink: #7a48ad;
     }
 
     #internships,
     .nav-button[data-section="internships"] {
-      --accent: var(--cyan-3);
-      --accent-ink: #12758d;
+      --accent: var(--purple-3);
+      --accent-ink: #7442a6;
     }
 
     #research,
     .nav-button[data-section="research"] {
-      --accent: var(--cyan-4);
-      --accent-ink: #11728a;
+      --accent: var(--purple-4);
+      --accent-ink: #6e3ba0;
     }
 
     #skills,
     .nav-button[data-section="skills"] {
-      --accent: var(--cyan-5);
-      --accent-ink: #106f87;
+      --accent: var(--purple-5);
+      --accent-ink: #6a359c;
     }
 
     #education,
     .nav-button[data-section="education"] {
-      --accent: var(--cyan-6);
-      --accent-ink: #0f6980;
+      --accent: var(--purple-6);
+      --accent-ink: #632f94;
     }
 
     #leadership,
     .nav-button[data-section="leadership"] {
-      --accent: var(--cyan-7);
-      --accent-ink: #0d6378;
+      --accent: var(--purple-7);
+      --accent-ink: #5c2a8d;
     }
 
     #contact,
     .nav-button[data-section="contact"] {
-      --accent: var(--cyan-8);
-      --accent-ink: #0c6075;
+      --accent: var(--purple-8);
+      --accent-ink: #552586;
     }
 
     .site-footer {
       padding: 1.5rem 1rem;
-      border-top: 1px solid #cde8ee;
+      border-top: 1px solid #dec9ef;
       background: #fff;
       color: #6b7280;
       text-align: center;
